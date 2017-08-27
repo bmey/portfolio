@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
-import '../../css/App.css';
+import logo from '../logo.svg';
+import './App.css';
 import {
   BrowserRouter as Router,
   Route,
@@ -9,8 +9,8 @@ import {
 } from 'react-router-dom';
 import asyncComponent from './AsyncComponent';
 
-const AsyncHome = asyncComponent(() => import('../containers/Home'));
-const AsyncNotFound = asyncComponent(() => import('../containers/NotFound'));
+const AsyncHome = asyncComponent(() => import('./Home'));
+const AsyncNotFound = asyncComponent(() => import('./NotFound'));
 
 class App extends Component {
   render() {
