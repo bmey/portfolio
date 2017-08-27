@@ -9,8 +9,11 @@ import {
 } from 'react-router-dom';
 import asyncComponent from './AsyncComponent';
 
-const AsyncHome = asyncComponent(() => import('./Home'));
-const AsyncNotFound = asyncComponent(() => import('./NotFound'));
+const AsyncHome = asyncComponent(() => import('./Home/Home'));
+const AsyncWork = asyncComponent(() => import('./Work/Work'));
+const AsyncAbout = asyncComponent(() => import('./About/About'));
+const AsyncContact = asyncComponent(() => import('./Contact/Contact'));
+const AsyncNotFound = asyncComponent(() => import('./NotFound/NotFound'));
 
 class App extends Component {
   render() {
@@ -27,11 +30,15 @@ class App extends Component {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/work">Work</Link></li>
                 <li><Link to="/about">About</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
               </ul>
             </p>
           </div>
           <Switch>
             <Route path="/" exact component={AsyncHome} />
+            <Route path="/work" component={AsyncWork} />
+            <Route path="/about" component={AsyncAbout} />
+            <Route path="/contact" component={AsyncContact} />
             <Route component={AsyncNotFound} />
           </Switch>
         </div>
