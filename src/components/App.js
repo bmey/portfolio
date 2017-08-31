@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import asyncComponent from './AsyncComponent';
 
 const AsyncHome = asyncComponent(() => import('./Home/Home'));
@@ -19,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-         <div>
+        <div>
           <div className="App">
             <div className="App-header">
               <img src={logo} className="App-logo" alt="logo" />
@@ -27,10 +22,18 @@ class App extends Component {
             </div>
             <p className="App-intro">
               <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/work">Work</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/work">Work</Link>
+                </li>
+                <li>
+                  <Link to="/about">About</Link>
+                </li>
+                <li>
+                  <Link to="/contact">Contact</Link>
+                </li>
               </ul>
             </p>
           </div>
