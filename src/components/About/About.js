@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Hero from './Hero';
 import Skills from './Skills';
 import Experiences from './Experiences';
+import Story from './Story';
 import CallToAction from './CallToAction';
 import Section from '../Shared/Section';
 
@@ -19,6 +20,11 @@ class About extends Component {
         <Section style={{ backgroundColor: '#ccc' }}>
           <h2>Experience</h2>
           <Experiences />
+        </Section>
+
+        <Section>
+          <h2>My Story</h2>
+          <Story />
         </Section>
 
         <Section className="section">
