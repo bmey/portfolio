@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 
 class Section extends Component {
   render() {
-    return <div class="section">{this.props.children}</div>;
+    return (
+      <div className="section" style={this.props.style}>
+        {this.props.children}
+      </div>
+    );
   }
 }
 
