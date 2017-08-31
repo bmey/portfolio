@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Button, Grid, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Hero from './Hero';
+import Skills from './Skills';
+import Section from '../Shared/Section';
 
 class About extends Component {
   render() {
@@ -9,85 +11,10 @@ class About extends Component {
       <div className="text-center">
         <Hero />
 
-        <div className="section">
+        <Section>
           <h2>Skills</h2>
-          <Grid>
-            <Row>
-              <Col xs={12} md={4}>
-                <Row>
-                  <Col xs={4} md={12}>
-                    <img
-                      src="http://lorempixel.com/g/200/200/"
-                      aria-hidden="true"
-                      alt="stuff"
-                    />
-                  </Col>
-                  <Col xs={8} md={12}>
-                    <h3>Heading Level 3</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Fusce bibendum lorem nec maximus venenatis. Sed et posuere
-                      mauris. Nunc sed facilisis lectus. Nunc sit amet dui
-                      scelerisque, euismod arcu vitae, interdum leo. Nam vitae
-                      ipsum vel arcu euismod mattis id euismod magna. Etiam eget
-                      sem eros. Vivamus congue pharetra felis.
-                    </p>
-                  </Col>
-                </Row>
-              </Col>
-              <Col xs={12} mdHidden lgHidden>
-                <hr />
-              </Col>
-              <Col xs={12} md={4}>
-                <Row>
-                  <Col xs={4} md={12}>
-                    <img
-                      src="http://lorempixel.com/g/200/200/"
-                      aria-hidden="true"
-                      alt="stuff"
-                    />
-                  </Col>
-                  <Col xs={8} md={12}>
-                    <h3>Heading Level 3</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Fusce bibendum lorem nec maximus venenatis. Sed et posuere
-                      mauris. Nunc sed facilisis lectus. Nunc sit amet dui
-                      scelerisque, euismod arcu vitae, interdum leo. Nam vitae
-                      ipsum vel arcu euismod mattis id euismod magna. Etiam eget
-                      sem eros. Vivamus congue pharetra felis.
-                    </p>
-                  </Col>
-                </Row>
-              </Col>
-              <Col xs={12} mdHidden lgHidden>
-                <hr />
-              </Col>
-              <Col xs={12} md={4}>
-                <Row>
-                  <Col xs={4} md={12}>
-                    <img
-                      src="http://lorempixel.com/g/200/200/"
-                      aria-hidden="true"
-                      alt="stuff"
-                    />
-                  </Col>
-                  <Col xs={8} md={12}>
-                    <h3>Heading Level 3</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Fusce bibendum lorem nec maximus venenatis. Sed et posuere
-                      mauris. Nunc sed facilisis lectus. Nunc sit amet dui
-                      scelerisque, euismod arcu vitae, interdum leo. Nam vitae
-                      ipsum vel arcu euismod mattis id euismod magna. Etiam eget
-                      sem eros. Vivamus congue pharetra felis.
-                    </p>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </Grid>
-        </div>
+          <Skills />
+        </Section>
 
         <div className="section" style={{ backgroundColor: '#ccc' }}>
           <h2>Experience</h2>
