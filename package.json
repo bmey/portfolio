@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bryan-mey.github.io/",
+  "homepage": "https://bmey.github.io/portfolio/",
   "dependencies": {
     "husky": "^0.14.3",
     "lint-staged": "^4.0.4",
