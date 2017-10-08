@@ -13,7 +13,7 @@ const AsyncNotFound = asyncComponent(() => import('./NotFound/NotFound'));
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/portfolio">
         <div>
           <div className="App">
             <div className="App-header">
