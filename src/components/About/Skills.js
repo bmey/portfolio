@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'reactstrap';
 import Skill from './Skill';
 
 class Skills extends Component {
   render() {
     return (
-      <Grid>
+      <Container>
         <Row>
           <Skill />
-          <Col xs={12} mdHidden lgHidden>
+          <Col xs={12} className="d-md-none d-lg-none d-xl-none">
             <hr />
           </Col>
           <Skill />
-          <Col xs={12} mdHidden lgHidden>
+          <Col xs={12} className="d-md-none d-lg-none d-xl-none">
             <hr />
           </Col>
           <Skill />
         </Row>
-      </Grid>
+      </Container>
     );
   }
 }

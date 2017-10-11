@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Button } from 'react-bootstrap';
+import { Button, Row, Col, Container } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class CallToAction extends Component {
   render() {
     return (
-      <Grid>
+      <Container>
         <Row>
           <Col xs={12} md={6}>
             <h2>Ready to start a project?</h2>
@@ -14,7 +14,7 @@ class CallToAction extends Component {
               pharetra felis.
             </p>
             <Link to="/contact">
-              <Button bsStyle="primary">Contact me</Button>
+              <Button color="primary">Contact me</Button>
             </Link>
           </Col>
           <Col xs={12} md={6}>
@@ -26,7 +26,7 @@ class CallToAction extends Component {
             <Link to="/work">Learn more about what I do</Link>
           </Col>
         </Row>
-      </Grid>
+      </Container>
     );
   }
 }
