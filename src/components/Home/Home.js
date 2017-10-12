@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class Home extends Component {
@@ -9,7 +9,9 @@ class Home extends Component {
         <img src="http://lorempixel.com/g/1250/500/" alt="hero" />
         <div>
           <h1>Bryan Mey</h1>
-          <Button bsStyle="default">Learn more</Button>
+          <Link to="/contact">
+            <Button color="primary">Contact me</Button>
+          </Link>
         </div>
 
         <div className="section">
@@ -19,7 +21,7 @@ class Home extends Component {
             <h3>Project Name</h3>
           </div>
           <Link to="/work">
-            <Button bsStyle="default">Learn more about my work</Button>
+            <Button color="secondary">Learn more about my work</Button>
           </Link>
         </div>
 
@@ -34,7 +36,7 @@ class Home extends Component {
             euismod magna. Etiam eget sem eros. Vivamus congue pharetra felis.
           </p>
           <Link to="/about">
-            <Button bsStyle="default">Learn more about me</Button>
+            <Button color="secondary">Learn more about me</Button>
           </Link>
         </div>
 
@@ -45,7 +47,7 @@ class Home extends Component {
             vel id euismod magna. Etia congue pharetra felis.
           </p>
           <Link to="/contact">
-            <Button bsStyle="primary">Contact me</Button>
+            <Button color="primary">Contact me</Button>
           </Link>
         </div>
       </div>

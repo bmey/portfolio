@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'reactstrap';
 import StoryIcon from './StoryIcon';
 
 const interestIcons = ['1', '2', '3'];
@@ -8,10 +8,10 @@ const personalIcons = ['4', '5', '6'];
 class Story extends Component {
   render() {
     return (
-      <Grid>
+      <Container>
         <Row>
           <Col xs={12} md={6}>
-            <Row className="hidden-sm hidden-xs">
+            <Row className="d-xs-none d-sm-none d-md-flex">
               {interestIcons.map((icon, index) => (
                 <StoryIcon key={index}>{icon}</StoryIcon>
               ))}
@@ -24,7 +24,7 @@ class Story extends Component {
               euismod magna. Etiam eget sem eros. Vivamus congue pharetra felis.
             </div>
           </Col>
-          <Col xs={12} mdHidden lgHidden>
+          <Col xs={12} className="d-md-none d-lg-none d-xl-none">
             <Row>
               {interestIcons.map((icon, index) => (
                 <StoryIcon key={index}>{icon}</StoryIcon>
@@ -42,14 +42,14 @@ class Story extends Component {
               vitae, interdum leo. Nam vitae ipsum vel arcu euismod mattis id
               euismod magna. Etiam eget sem eros. Vivamus congue pharetra felis.
             </div>
-            <Row className="hidden-sm hidden-xs">
+            <Row className="d-xs-none d-sm-none d-md-flex">
               {personalIcons.map((icon, index) => (
                 <StoryIcon key={index}>{icon}</StoryIcon>
               ))}
             </Row>
           </Col>
         </Row>
-      </Grid>
+      </Container>
     );
   }
 }

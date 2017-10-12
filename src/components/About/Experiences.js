@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Button } from 'react-bootstrap';
+import { Button, Container, Row, Col } from 'reactstrap';
 import Experience from './Experience';
 
 class Experiences extends Component {
   render() {
     return (
-      <Grid>
+      <Container>
         <Row>
           <Experience />
         </Row>
         <Row>
-          <Col xs={12} mdHidden lgHidden>
+          <Col xs={12} className="d-md-none d-lg-none d-xl-none">
             <hr />
           </Col>
         </Row>
@@ -18,7 +18,7 @@ class Experiences extends Component {
           <Experience />
         </Row>
         <Row>
-          <Col xs={12} md={8} mdOffset={2}>
+          <Col xs={12} md={{ size: 8, offset: 2 }}>
             <hr />
           </Col>
         </Row>
@@ -30,10 +30,10 @@ class Experiences extends Component {
             </p>
           </Col>
           <Col xs={4} md={12}>
-            <Button>Download resume</Button>
+            <Button color="secondary">Download resume</Button>
           </Col>
         </Row>
-      </Grid>
+      </Container>
     );
   }
 }

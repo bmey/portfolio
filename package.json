@@ -4,14 +4,16 @@
   "private": true,
   "homepage": "https://bmey.github.io/portfolio/",
   "dependencies": {
+    "bootstrap": "^4.0.0-beta",
     "husky": "^0.14.3",
+    "jquery": "^3.0.0",
     "lint-staged": "^4.0.4",
     "prettier": "^1.6.1",
     "react": "^15.6.1",
-    "react-bootstrap": "^0.31.2",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "reactstrap": "^5.0.0-alpha.3"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
