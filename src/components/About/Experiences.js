@@ -23,13 +23,13 @@ class Experiences extends Component {
           </Col>
         </Row>
         <Row>
-          <Col xs={8} md={12}>
+          <Col xs={6} md={12}>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               eget sem eros. Vivamus congue pharetra felis.
             </p>
           </Col>
-          <Col xs={4} md={12}>
+          <Col xs={6} md={12}>
             <Button color="secondary">Download resume</Button>
           </Col>
         </Row>
