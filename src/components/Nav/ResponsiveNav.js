@@ -30,7 +30,11 @@ export default class ResponsiveNav extends React.Component {
 
     return (
       <Navbar color="dark" dark expand="md" fixed="top">
-        <Link to="/" className="navbar-brand mr-auto">
+        <Link
+          to="/"
+          className="navbar-brand mr-auto"
+          onClick={this.closeNavbar}
+        >
           Bryan Mey
         </Link>
         <NavbarToggler onClick={this.toggleNavbar}>Menu</NavbarToggler>
