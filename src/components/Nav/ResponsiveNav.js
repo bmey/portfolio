@@ -1,13 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem
-} from 'reactstrap';
+import { NavLink, Link } from 'react-router-dom';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 
 export default class ResponsiveNav extends React.Component {
   constructor(props) {
@@ -37,9 +30,9 @@ export default class ResponsiveNav extends React.Component {
 
     return (
       <Navbar color="dark" dark expand="md" fixed="top">
-        <NavbarBrand href="/" className="mr-auto">
+        <Link to="/" className="navbar-brand mr-auto">
           Bryan Mey
-        </NavbarBrand>
+        </Link>
         <NavbarToggler onClick={this.toggleNavbar}>Menu</NavbarToggler>
         <Collapse
           isOpen={!this.state.collapsed}
@@ -49,9 +42,14 @@ export default class ResponsiveNav extends React.Component {
           <Nav navbar className="text-right">
             {routes.map(route => (
               <NavItem onClick={this.closeNavbar}>
-                <Link to={route.path} className="nav-link">
+                <NavLink
+                  to={route.path}
+                  className="nav-link"
+                  activeClassName="active"
+                  exact={route.exact}
+                >
                   {route.text}
-                </Link>
+                </NavLink>
               </NavItem>
             ))}
           </Nav>
