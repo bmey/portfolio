@@ -45,7 +45,7 @@ export default class ResponsiveNav extends React.Component {
         >
           <Nav navbar className="text-right">
             {routes.map(route => (
-              <NavItem onClick={this.closeNavbar}>
+              <NavItem onClick={this.closeNavbar} key={route.path}>
                 <NavLink
                   to={route.path}
                   className="nav-link"

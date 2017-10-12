@@ -6,7 +6,7 @@ class Experiences extends Component {
   render() {
     return (
       <Container>
-        <Row>
+        <Row className="justify-content-md-center">
           <Experience />
         </Row>
         <Row>
@@ -14,7 +14,7 @@ class Experiences extends Component {
             <hr />
           </Col>
         </Row>
-        <Row>
+        <Row className="justify-content-md-center">
           <Experience />
         </Row>
         <Row>

@@ -19,6 +19,7 @@ class App extends Component {
                 path={route.path}
                 component={route.component}
                 exact={route.exact}
+                key={route.path}
               />
             ))}
             <Route component={AsyncNotFound} />

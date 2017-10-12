@@ -4,7 +4,7 @@ import { Row, Col } from 'reactstrap';
 class Experience extends Component {
   render() {
     return (
-      <Col xs={12} md={8} mdOffset={2}>
+      <Col xs={12} md={8}>
         <Row>
           <Col xs={2}>
             <img
