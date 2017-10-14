@@ -10,8 +10,18 @@ html {
   font-size: 14px;
 }
 
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(md) {
   html {
     font-size: 16px;
+  }
+}
+
+.navbar-spacing .navbar {
+  margin-bottom: 1rem;
+}
+
+@include media-breakpoint-down(sm) {
+  .navbar-spacing {
+    padding-top: 5rem;
   }
 }

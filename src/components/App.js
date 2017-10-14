@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <Router basename="/portfolio">
-        <div style={{ marginTop: '5em' }}>
+        <div className="navbar-spacing">
           <ResponsiveNav routes={routes} />
           <Switch>
             {routes.map(route => (

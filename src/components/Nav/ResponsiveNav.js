@@ -1,3 +1,4 @@
+import './Nav.css';
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
@@ -29,7 +30,7 @@ export default class ResponsiveNav extends React.Component {
     const { routes } = this.props;
 
     return (
-      <Navbar color="dark" dark expand="md" fixed="top">
+      <Navbar color="dark" dark expand="sm" className="fixed-top-sm">
         <Link
           to="/"
           className="navbar-brand mr-auto"
