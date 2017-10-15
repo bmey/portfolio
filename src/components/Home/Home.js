@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import headshot from '../Shared/headshot.jpg';
+import '../Shared/utility.css';
+import './Home.css';
 
 class Home extends Component {
   render() {
@@ -25,19 +28,25 @@ class Home extends Component {
           </Link>
         </div>
 
-        <div className="section" style={{ backgroundColor: '#ccc' }}>
+        <div style={{ backgroundColor: '#ccc', padding: '20px 30px 30px' }}>
           <h2>About</h2>
-          <img src="http://lorempixel.com/400/200" alt="Bryan Mey" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            bibendum lorem nec maximus venenatis. Sed et posuere mauris. Nunc
-            sed facilisis lectus. Nunc sit amet dui scelerisque, euismod arcu
-            vitae, interdum leo. Nam vitae ipsum vel arcu euismod mattis id
-            euismod magna. Etiam eget sem eros. Vivamus congue pharetra felis.
-          </p>
-          <Link to="/about">
-            <Button color="secondary">Learn more about me</Button>
-          </Link>
+          <div className="grid-section-about">
+            <img
+              src={headshot}
+              alt="Bryan Mey"
+              className="circular-square"
+              style={{ height: '100px' }}
+            />
+            <div className="item-main">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              bibendum lorem nec maximus venenatis. Sed et posuere mauris. Nunc
+              sed facilisis lectus. Nunc sit amet dui scelerisque, euismod
+              magna. Etiam eget sem eros. Vivamus congue pharetra felis.
+            </div>
+            <Link to="/about">
+              <Button color="secondary">Learn more about me</Button>
+            </Link>
+          </div>
         </div>
 
         <div className="section">

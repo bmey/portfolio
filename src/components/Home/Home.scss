@@ -1,0 +1,45 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.grid-section-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  justify-items: center;
+
+  .item-main {
+    padding: 0 20px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .grid-section-about {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "main photo" "main cta";
+
+    .item-main {
+      grid-area: main;
+
+      display: flex;
+      align-items: center;
+
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      background-color: #eee;
+      padding: 30px;
+    }
+
+    img {
+      grid-area: photo;
+    }
+
+    a {
+      grid-area: cta;
+    }
+  }
+}
