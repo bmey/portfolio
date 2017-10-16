@@ -16,12 +16,8 @@ html {
   }
 }
 
-.navbar-spacing .navbar {
-  margin-bottom: 1rem;
-}
-
 @include media-breakpoint-down(sm) {
   .navbar-spacing {
-    padding-top: 5rem;
+    padding-top: 3.5rem;
   }
 }

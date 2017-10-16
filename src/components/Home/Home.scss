@@ -6,6 +6,33 @@ h2 {
   margin-bottom: 20px;
 }
 
+.grid-section-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  min-height: 10rem;
+
+  img {
+    grid-column: 1 / 1;
+    grid-row: 1 / 5;
+    z-index: 1;
+  }
+
+  h1 {
+    grid-column: 1 / 1;
+    grid-row: 1 / 4;
+    z-index: 2;
+
+    color: white;
+  }
+
+  a {
+    grid-column: 1 / 1;
+    grid-row: 4 / 5;
+    z-index: 2;
+  }
+}
+
 .grid-section-about {
   display: grid;
   grid-template-columns: 1fr;
