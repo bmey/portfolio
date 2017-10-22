@@ -10,7 +10,6 @@ class Home extends Component {
     return (
       <div className="text-center">
         <div className="grid-section-hero">
-          <img src="http://lorempixel.com/g/1250/500/" alt="hero" />
           <h1>Bryan Mey</h1>
           <Link to="/contact">
             <Button color="primary">Contact me</Button>
