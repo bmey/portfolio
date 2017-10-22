@@ -4,7 +4,7 @@ import Skills from './Skills';
 import Experiences from './Experiences';
 import Story from './Story';
 import CallToAction from './CallToAction';
-import Section from '../Shared/Section';
+import Section from '../../Shared/Section';
 
 class About extends Component {
   render() {

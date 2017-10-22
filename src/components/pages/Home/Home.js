@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import Carousel from '../carousel/carousel';
-import headshot from '../Shared/headshot.jpg';
-import { projectItems } from '../../constant/projectItem';
-import '../Shared/utility.css';
+import Carousel from '../../carousel/carousel';
+import headshot from '../../Shared/headshot.jpg';
+import { projectItems } from '../../../constant/projectItem';
+import '../../Shared/utility.css';
 import './Home.css';
 
 class Home extends Component {
