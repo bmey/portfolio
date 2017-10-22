@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import Carousel from '../carousel/carousel';
 import headshot from '../Shared/headshot.jpg';
+import { projectItems } from '../../constant/projectItem';
 import '../Shared/utility.css';
 import './Home.css';
 
@@ -18,13 +20,15 @@ class Home extends Component {
 
         <div className="section">
           <h2>Work</h2>
-          <img src="http://lorempixel.com/g/1250/300/" alt="project teaser" />
-          <div>
-            <h3>Project Name</h3>
-          </div>
+          <p>
+            Doomsday device? Ah, now the ball's in Farnsworth's court! I saw you
+            with those two "ladies of the evening" at Elzars. Explain that. Now
+            Fry, it's been a few years since medical school, so remind me.
+          </p>
           <Link to="/work">
-            <Button color="secondary">Learn more about my work</Button>
+            <Button color="secondary">Learn more</Button>
           </Link>
+          <Carousel items={projectItems} />
         </div>
 
         <div style={{ backgroundColor: '#ccc', padding: '20px 30px 30px' }}>
