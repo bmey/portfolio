@@ -70,6 +70,7 @@ class Carousel extends Component {
           key={item.src}
           src={item.src}
           altText={item.altText}
+          cssModule={{ 'img-fluid': 'img-fluid ' + item.imageClassName }}
         >
           <div className="carousel-caption">
             <h3>{item.title}</h3>
