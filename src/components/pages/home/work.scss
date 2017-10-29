@@ -14,6 +14,14 @@
     filter: brightness(40%);
   }
 
+  .caption {
+    align-self: self-end;    
+  }
+
+  .cta {
+    align-self: self-start;    
+  }
+
   .carousel .img-square {
     position: absolute;
     top: 50%;

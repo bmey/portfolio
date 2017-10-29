@@ -43,6 +43,14 @@ h2 {
   .item-main {
     padding: 0 20px;
   }
+
+  img {
+    align-self: self-end;
+  }
+
+  a {
+    align-self: self-start;
+  }
 }
 
 @include media-breakpoint-up(md) {
