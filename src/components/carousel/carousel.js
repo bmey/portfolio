@@ -83,8 +83,12 @@ class Carousel extends Component {
     return (
       <ReactstrapCarousel
         activeIndex={activeIndex}
-        next={this.next}
-        previous={this.previous}
+        next={() => {
+          this.next(items);
+        }}
+        previous={() => {
+          this.previous(items);
+        }}
         interval={false}
       >
         <CarouselIndicators
