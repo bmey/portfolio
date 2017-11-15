@@ -4,7 +4,7 @@ import Skills from './Skills';
 import Experiences from './Experiences';
 import Story from './Story';
 import CallToAction from './CallToAction';
-import Section from '../../shared/Section';
+import Section from '../../section/Section';
 
 class About extends Component {
   render() {
@@ -17,7 +17,7 @@ class About extends Component {
           <Skills />
         </Section>
 
-        <Section style={{ backgroundColor: '#ccc' }}>
+        <Section useSecondaryBackground>
           <h2>Experience</h2>
           <Experiences />
         </Section>
@@ -27,7 +27,7 @@ class About extends Component {
           <Story />
         </Section>
 
-        <Section className="section">
+        <Section useSecondaryBackground>
           <CallToAction />
         </Section>
       </div>

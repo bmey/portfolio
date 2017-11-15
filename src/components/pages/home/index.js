@@ -3,6 +3,7 @@ import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import Carousel from '../../carousel/carousel';
 import headshot from '../../../img/headshot.jpg';
+import Section from '../../section/Section';
 import { projectItems } from '../../../constant/projectItem';
 import '../../shared/utility.css';
 import './Home.css';
@@ -19,7 +20,7 @@ class Home extends Component {
           </Link>
         </div>
 
-        <div className="section work">
+        <Section className="work">
           <h2>Work</h2>
           <div className="grid-section-work">
             <div className="caption">
@@ -36,9 +37,9 @@ class Home extends Component {
               cssModule={{ carousel: 'item-main' }}
             />
           </div>
-        </div>
+        </Section>
 
-        <div style={{ backgroundColor: '#ccc', padding: '20px 30px 30px' }}>
+        <Section useSecondaryBackground>
           <h2>About</h2>
           <div className="grid-section-about">
             <img
@@ -57,9 +58,9 @@ class Home extends Component {
               <Button color="secondary">Learn more about me</Button>
             </Link>
           </div>
-        </div>
+        </Section>
 
-        <div className="section">
+        <Section>
           <h2>Want to talk?</h2>
           <p>
             Lorem ipsum dolor sit amet. Sed et posuere mauris. Nam vitae ipsum
@@ -68,7 +69,7 @@ class Home extends Component {
           <Link to="/contact">
             <Button color="primary">Contact me</Button>
           </Link>
-        </div>
+        </Section>
       </div>
     );
   }
