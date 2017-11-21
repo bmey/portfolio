@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Container, Row, Col } from 'reactstrap';
 import Experience from './Experience';
+import { resumePdfPath } from '../../routes';
 
 class Experiences extends Component {
   render() {
@@ -30,7 +31,9 @@ class Experiences extends Component {
             </p>
           </Col>
           <Col xs={6} md={12}>
-            <Button color="secondary">Download resume</Button>
+            <a href={resumePdfPath} role="button" download>
+              <Button color="secondary">Download resume</Button>
+            </a>
           </Col>
         </Row>
       </Container>
