@@ -27,5 +27,3 @@ export const appRoutes = [
     component: asyncComponent(() => import('./pages/contact'))
   }
 ];
-
-export const resumePdfPath = process.env.PUBLIC_URL + '/Resume-Bryan-Mey.pdf';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Container, Row, Col } from 'reactstrap';
 import Experience from './Experience';
-import { resumePdfPath } from '../../routes';
+import resumePdfPath from '../../../pdf/Resume-Bryan-Mey.pdf';
 
 class Experiences extends Component {
   render() {
