@@ -3,7 +3,9 @@ import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import Carousel from '../../carousel/carousel';
 import headshot from '../../../img/headshot.jpg';
+import heroImage from '../../../img/splash-1250x500.jpg';
 import Section from '../../section/Section';
+import HeroSection from '../../section-hero';
 import { projectItems } from '../../../constant/projectItem';
 import '../../shared/utility.css';
 import './Home.css';
@@ -13,12 +15,12 @@ class Home extends Component {
   render() {
     return (
       <div className="text-center">
-        <div className="grid-section-hero">
+        <HeroSection className="home" backgroundImage={heroImage}>
           <h1>Bryan Mey</h1>
           <Link to="/contact">
             <Button color="primary">Contact me</Button>
           </Link>
-        </div>
+        </HeroSection>
 
         <Section className="work">
           <h2>Work</h2>

@@ -6,21 +6,10 @@ h2 {
   margin-bottom: 20px;
 }
 
-.section {
-  padding: 20px 30px 30px;
-}
-
-.grid-section-hero {
+.section-hero.home {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-
-  height: 75vh;
-  background-image: url("http://lorempixel.com/g/1250/500/");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
 
   h1 {
     grid-column: 1 / 1;
