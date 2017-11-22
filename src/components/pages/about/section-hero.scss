@@ -1,0 +1,25 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.section-hero.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+
+  p {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    color: white;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .section-hero.about {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    p {
+      grid-column: 1 / 3;
+    }
+  }
+}
