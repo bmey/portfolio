@@ -11,7 +11,7 @@ class Story extends Component {
       <Container>
         <Row>
           <Col xs={12} md={6}>
-            <Row className="d-xs-none d-sm-none d-md-flex">
+            <Row className="d-none d-md-flex">
               {interestIcons.map((icon, index) => (
                 <StoryIcon key={index}>{icon}</StoryIcon>
               ))}
@@ -24,7 +24,7 @@ class Story extends Component {
               euismod magna. Etiam eget sem eros. Vivamus congue pharetra felis.
             </div>
           </Col>
-          <Col xs={12} className="d-md-none d-lg-none d-xl-none">
+          <Col xs={12} className="d-block d-md-none">
             <Row>
               {interestIcons.map((icon, index) => (
                 <StoryIcon key={index}>{icon}</StoryIcon>
@@ -42,7 +42,7 @@ class Story extends Component {
               vitae, interdum leo. Nam vitae ipsum vel arcu euismod mattis id
               euismod magna. Etiam eget sem eros. Vivamus congue pharetra felis.
             </div>
-            <Row className="d-xs-none d-sm-none d-md-flex">
+            <Row className="d-none d-md-flex">
               {personalIcons.map((icon, index) => (
                 <StoryIcon key={index}>{icon}</StoryIcon>
               ))}
