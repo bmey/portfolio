@@ -61,54 +61,45 @@ class Carousel extends Component {
     const { activeIndex } = this.state;
     const { items } = this.props;
 
-    const slides = items.map(item => {
-      return (
-        <CarouselItem
-          onExiting={() => this.onExiting}
-          onExited={() => this.onExited}
-          key={item.src}
-          src={item.src}
-          altText={item.altText}
-          cssModule={{ 'img-fluid': 'img-fluid ' + item.imageClassName }}
-        >
-          <div className="carousel-caption">
-            <h3>{item.title}</h3>
-            <p>{item.caption}</p>
-          </div>
-        </CarouselItem>
-      );
-    });
-
     return (
       <ReactstrapCarousel
         activeIndex={activeIndex}
-        next={() => {
-          this.next(items);
-        }}
-        previous={() => {
-          this.previous(items);
-        }}
+        next={() => this.next(items)}
+        previous={() => this.previous(items)}
         interval={false}
       >
         <CarouselIndicators
           items={items}
           activeIndex={activeIndex}
-          onClickHandler={this.goToIndex}
+          onClickHandler={newIndex => this.goToIndex(newIndex)}
         />
-        {slides}
+
+        {items.map(item => (
+          <CarouselItem
+            onExiting={() => this.onExiting}
+            onExited={() => this.onExited}
+            key={item.src}
+            src={item.src}
+            altText={item.altText}
+            cssModule={{ 'img-fluid': 'img-fluid ' + item.imageClassName }}
+          >
+            <div className="carousel-caption">
+              <h3>{item.title}</h3>
+              <p>{item.caption}</p>
+            </div>
+          </CarouselItem>
+        ))}
+
         <CarouselControl
           direction="prev"
           directionText="Previous"
-          onClickHandler={() => {
-            this.previous(items);
-          }}
+          onClickHandler={() => this.previous(items)}
         />
+
         <CarouselControl
           direction="next"
           directionText="Next"
-          onClickHandler={() => {
-            this.next(items);
-          }}
+          onClickHandler={() => this.next(items)}
         />
       </ReactstrapCarousel>
     );
