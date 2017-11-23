@@ -1,18 +1,17 @@
 import './Nav.css';
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { NavLink, Link } from 'react-router-dom';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 
-export default class ResponsiveNav extends React.Component {
-  constructor(props) {
-    super(props);
+export default class ResponsiveNav extends Component {
+  static propTypes = {
+    routes: PropTypes.array.isRequired
+  };
 
-    this.toggleNavbar = this.toggleNavbar.bind(this);
-    this.closeNavbar = this.closeNavbar.bind(this);
-    this.state = {
-      collapsed: true
-    };
-  }
+  state = {
+    collapsed: true
+  };
 
   toggleNavbar() {
     this.setState({
@@ -27,6 +26,7 @@ export default class ResponsiveNav extends React.Component {
   }
 
   render() {
+    const { collapsed } = this.state;
     const { routes } = this.props;
 
     return (
@@ -34,19 +34,15 @@ export default class ResponsiveNav extends React.Component {
         <Link
           to="/"
           className="navbar-brand mr-auto"
-          onClick={this.closeNavbar}
+          onClick={() => this.closeNavbar()}
         >
           Bryan Mey
         </Link>
-        <NavbarToggler onClick={this.toggleNavbar}>Menu</NavbarToggler>
-        <Collapse
-          isOpen={!this.state.collapsed}
-          navbar
-          className="justify-content-end"
-        >
+        <NavbarToggler onClick={() => this.toggleNavbar()}>Menu</NavbarToggler>
+        <Collapse isOpen={!collapsed} navbar className="justify-content-end">
           <Nav navbar className="text-right">
             {routes.map(route => (
-              <NavItem onClick={this.closeNavbar} key={route.path}>
+              <NavItem onClick={() => this.closeNavbar()} key={route.path}>
                 <NavLink
                   to={route.path}
                   className="nav-link"
