@@ -8,26 +8,25 @@ import {
 } from 'reactstrap';
 
 class Carousel extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { activeIndex: 0 };
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
-    this.goToIndex = this.goToIndex.bind(this);
-    this.onExiting = this.onExiting.bind(this);
-    this.onExited = this.onExited.bind(this);
-  }
+  static propTypes = {
+    items: PropTypes.array.isRequired
+  };
+
+  state = {
+    activeIndex: 0,
+    animating: false
+  };
 
   onExiting() {
-    this.animating = true;
+    this.setState({ animating: true });
   }
 
   onExited() {
-    this.animating = false;
+    this.setState({ animating: false });
   }
 
   next(items) {
-    if (this.animating) {
+    if (this.state.animating) {
       return;
     }
 
@@ -39,7 +38,7 @@ class Carousel extends Component {
   }
 
   previous(items) {
-    if (this.animating) {
+    if (this.state.animating) {
       return;
     }
 
@@ -51,7 +50,7 @@ class Carousel extends Component {
   }
 
   goToIndex(newIndex) {
-    if (this.animating) {
+    if (this.state.animating) {
       return;
     }
 
@@ -65,8 +64,8 @@ class Carousel extends Component {
     const slides = items.map(item => {
       return (
         <CarouselItem
-          onExiting={this.onExiting}
-          onExited={this.onExited}
+          onExiting={() => this.onExiting}
+          onExited={() => this.onExited}
           key={item.src}
           src={item.src}
           altText={item.altText}
@@ -115,9 +114,5 @@ class Carousel extends Component {
     );
   }
 }
-
-Carousel.propTypes = {
-  items: PropTypes.array.isRequired
-};
 
 export default Carousel;
