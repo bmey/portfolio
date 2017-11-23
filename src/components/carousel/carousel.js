@@ -76,8 +76,8 @@ class Carousel extends Component {
 
         {items.map(item => (
           <CarouselItem
-            onExiting={() => this.onExiting}
-            onExited={() => this.onExited}
+            onExiting={() => this.onExiting()}
+            onExited={() => this.onExited()}
             key={item.src}
             src={item.src}
             altText={item.altText}
