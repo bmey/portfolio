@@ -1,3 +1,7 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
 .project-banner {
     height: 22vh;
     background-position: center;
@@ -5,4 +9,16 @@
     background-size: cover;
 
     color: white;
+}
+
+.project-quote {
+    padding: 20px;
+}
+
+@include media-breakpoint-down(xs) {
+    .project-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }        
 }
