@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
+import Section from '../../section/Section';
+import ProcessSection from './ProcessSection';
+import CallToAction from './CallToAction';
 
 class Work extends Component {
   render() {
     return (
-      <div className="text-center">
+      <div>
         <h1>Work</h1>
+
+        <Section useSecondaryBackground>
+          <ProcessSection />
+        </Section>
+
+        <Section>
+          <CallToAction />
+        </Section>
       </div>
     );
   }
