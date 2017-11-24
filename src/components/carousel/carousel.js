@@ -78,7 +78,7 @@ class Carousel extends Component {
           <CarouselItem
             onExiting={() => this.onExiting()}
             onExited={() => this.onExited()}
-            key={item.src}
+            key={item.key}
             src={item.src}
             altText={item.altText}
             cssModule={{ 'img-fluid': 'img-fluid ' + item.imageClassName }}
