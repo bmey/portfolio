@@ -3,12 +3,21 @@
 @import "bootstrap/scss/mixins";
 
 .project-banner {
-    height: 22vh;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     color: white;
+
+    h2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 }
 
 .project-quote {
@@ -16,9 +25,7 @@
 }
 
 @include media-breakpoint-down(xs) {
-    .project-banner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .project-banner h2 {
+        position: initial;
     }        
 }
