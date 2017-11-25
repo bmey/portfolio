@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import Skills from './Skills';
-import Experiences from './Experiences';
-import Story from './Story';
-import CallToAction from './CallToAction';
-import Section from '../../section/Section';
-import HeroSection from '../../section-hero';
-import heroImage from '../../../img/splash-1250x500.jpg';
-import './section-hero.css';
+import React, { Component } from "react";
+import Skills from "./Skills";
+import Experiences from "./Experiences";
+import Story from "./Story";
+import CallToAction from "./CallToAction";
+import Section from "../../section/Section";
+import HeroSection from "../../section-hero";
+import heroImage from "../../../img/splash-1250x500.jpg";
+import "./section-hero.css";
 
 class About extends Component {
   render() {

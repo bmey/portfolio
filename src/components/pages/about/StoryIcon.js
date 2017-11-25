@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Col } from 'reactstrap';
+import React, { Component } from "react";
+import { Col } from "reactstrap";
 
 class StoryIcon extends Component {
   render() {

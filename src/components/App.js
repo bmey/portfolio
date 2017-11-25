@@ -1,8 +1,8 @@
-import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import ResponsiveNav from './nav/ResponsiveNav';
-import { appRoutes, notFoundRoute } from './routes';
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ResponsiveNav from "./nav/ResponsiveNav";
+import { appRoutes, notFoundRoute } from "./routes";
 
 const App = () => (
   <Router basename="/portfolio">

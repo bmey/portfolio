@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import Section from '../../section/Section';
-import ProcessSection from './ProcessSection';
-import ProjectBanner from './ProjectBanner';
-import ProjectDetails from './ProjectDetails';
-import CallToAction from './CallToAction';
-import { projectItems } from '../../../constant/projectItem';
+import React, { Component } from "react";
+import Section from "../../section/Section";
+import ProcessSection from "./ProcessSection";
+import ProjectBanner from "./ProjectBanner";
+import ProjectDetails from "./ProjectDetails";
+import CallToAction from "./CallToAction";
+import { projectItems } from "../../../constant/projectItem";
 
 class Work extends Component {
   render() {
@@ -23,7 +23,7 @@ class Work extends Component {
             <ProjectDetails
               images={[project.src]}
               description={project.caption}
-              url={'http://www.google.com'}
+              url={"http://www.google.com"}
               inverseDisplayOrder={index % 2 === 0}
             />
           </div>

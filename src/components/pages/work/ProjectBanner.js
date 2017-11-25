@@ -1,6 +1,6 @@
-import './ProjectBanner.css';
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import "./ProjectBanner.css";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export default class ProjectBanner extends Component {
   static propTypes = {
@@ -14,9 +14,9 @@ export default class ProjectBanner extends Component {
 
     const quoteComponent = (
       <div className="text-center">
-        <span style={{ fontSize: '24px' }}>"</span>
+        <span style={{ fontSize: "24px" }}>"</span>
         <span>{quote}</span>
-        <span style={{ fontSize: '24px' }}>"</span>
+        <span style={{ fontSize: "24px" }}>"</span>
       </div>
     );
 

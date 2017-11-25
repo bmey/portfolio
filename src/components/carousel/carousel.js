@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {
   Carousel as ReactstrapCarousel,
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-} from 'reactstrap';
+} from "reactstrap";
 
 class Carousel extends Component {
   static propTypes = {
@@ -81,7 +81,7 @@ class Carousel extends Component {
             key={item.key}
             src={item.src}
             altText={item.altText}
-            cssModule={{ 'img-fluid': 'img-fluid ' + item.imageClassName }}
+            cssModule={{ "img-fluid": "img-fluid " + item.imageClassName }}
           >
             <div className="carousel-caption">
               <h3>{item.title}</h3>

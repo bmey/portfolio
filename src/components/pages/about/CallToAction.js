@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Button, Row, Col, Container } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Button, Row, Col, Container } from "reactstrap";
+import { Link } from "react-router-dom";
 
 class CallToAction extends Component {
   render() {

@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import StoryIcon from './StoryIcon';
+import React, { Component } from "react";
+import { Container, Row, Col } from "reactstrap";
+import StoryIcon from "./StoryIcon";
 
-const interestIcons = ['1', '2', '3'];
-const personalIcons = ['4', '5', '6'];
+const interestIcons = ["1", "2", "3"];
+const personalIcons = ["4", "5", "6"];
 
 class Story extends Component {
   render() {

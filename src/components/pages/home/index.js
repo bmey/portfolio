@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import { Button } from 'reactstrap';
-import { Link } from 'react-router-dom';
-import Carousel from '../../carousel/carousel';
-import headshot from '../../../img/headshot.jpg';
-import heroImage from '../../../img/splash-1250x500.jpg';
-import Section from '../../section/Section';
-import HeroSection from '../../section-hero';
-import { projectItems } from '../../../constant/projectItem';
-import '../../shared/utility.css';
-import './Home.css';
-import './work.css';
+import React, { Component } from "react";
+import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
+import Carousel from "../../carousel/carousel";
+import headshot from "../../../img/headshot.jpg";
+import heroImage from "../../../img/splash-1250x500.jpg";
+import Section from "../../section/Section";
+import HeroSection from "../../section-hero";
+import { projectItems } from "../../../constant/projectItem";
+import "../../shared/utility.css";
+import "./Home.css";
+import "./work.css";
 
 class Home extends Component {
   render() {
@@ -36,7 +36,7 @@ class Home extends Component {
             </Link>
             <Carousel
               items={projectItems}
-              cssModule={{ carousel: 'item-main' }}
+              cssModule={{ carousel: "item-main" }}
             />
           </div>
         </Section>
@@ -48,7 +48,7 @@ class Home extends Component {
               src={headshot}
               alt="Bryan Mey"
               className="circular-square"
-              style={{ height: '100px' }}
+              style={{ height: "100px" }}
             />
             <div className="item-main">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
