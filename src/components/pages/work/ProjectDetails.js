@@ -7,7 +7,7 @@ export default class ProjectDetails extends Component {
     images: PropTypes.array.isRequired,
     description: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
-    inverseDisplayOrder: PropTypes.bool
+    inverseDisplayOrder: PropTypes.bool,
   };
 
   render() {

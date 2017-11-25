@@ -4,17 +4,17 @@ import {
   Carousel as ReactstrapCarousel,
   CarouselItem,
   CarouselControl,
-  CarouselIndicators
+  CarouselIndicators,
 } from 'reactstrap';
 
 class Carousel extends Component {
   static propTypes = {
-    items: PropTypes.array.isRequired
+    items: PropTypes.array.isRequired,
   };
 
   state = {
     activeIndex: 0,
-    animating: false
+    animating: false,
   };
 
   onExiting() {

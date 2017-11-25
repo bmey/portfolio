@@ -6,7 +6,7 @@ class HeroSection extends Component {
   static propTypes = {
     backgroundImage: PropTypes.string.isRequired,
     children: PropTypes.any.isRequired,
-    className: PropTypes.string
+    className: PropTypes.string,
   };
 
   render() {
@@ -15,7 +15,7 @@ class HeroSection extends Component {
       <div
         className={'section-hero ' + (className || '')}
         style={{
-          backgroundImage: `url(${backgroundImage})`
+          backgroundImage: `url(${backgroundImage})`,
         }}
       >
         {children}

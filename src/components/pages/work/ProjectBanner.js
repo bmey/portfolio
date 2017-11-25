@@ -6,7 +6,7 @@ export default class ProjectBanner extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     quote: PropTypes.string.isRequired,
-    backgroundImage: PropTypes.string.isRequired
+    backgroundImage: PropTypes.string.isRequired,
   };
 
   render() {

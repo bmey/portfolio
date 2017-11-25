@@ -6,22 +6,22 @@ import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 
 export default class ResponsiveNav extends Component {
   static propTypes = {
-    routes: PropTypes.array.isRequired
+    routes: PropTypes.array.isRequired,
   };
 
   state = {
-    collapsed: true
+    collapsed: true,
   };
 
   toggleNavbar() {
     this.setState({
-      collapsed: !this.state.collapsed
+      collapsed: !this.state.collapsed,
     });
   }
 
   closeNavbar() {
     this.setState({
-      collapsed: true
+      collapsed: true,
     });
   }
 
