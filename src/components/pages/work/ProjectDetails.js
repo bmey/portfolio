@@ -13,22 +13,26 @@ export default class ProjectDetails extends Component {
   render() {
     const { images, description, url, inverseDisplayOrder } = this.props;
 
-    const descriptionElement = (
-      <Col xs={12} sm={6}>
-        <p>{description}</p>
-        <a href={url}>
-          <Button>Visit</Button>
-        </a>
-      </Col>
-    );
     return (
       <Container className="text-center">
         <Row>
-          {inverseDisplayOrder && descriptionElement}
-          <Col xs={12} sm={6}>
+          <Col
+            xs={12}
+            sm={6}
+            className={inverseDisplayOrder ? 'order-sm-2' : ''}
+          >
             {images.map((image, index) => <span key={index}>{image}</span>)}
           </Col>
-          {!inverseDisplayOrder && descriptionElement}
+          <Col
+            xs={12}
+            sm={6}
+            className={inverseDisplayOrder ? 'order-sm-1' : ''}
+          >
+            <p>{description}</p>
+            <a href={url}>
+              <Button>Visit</Button>
+            </a>
+          </Col>
         </Row>
       </Container>
     );
