@@ -3,12 +3,12 @@
 @import "bootstrap/scss/mixins";
 
 .fixed-top-sm {
-    background-color: red!important;
+  background-color: red !important;
 }
 
 @include media-breakpoint-down(sm) {
   .fixed-top-sm {
-    background-color: blue!important;
+    background-color: blue !important;
     position: fixed;
     top: 0;
     right: 0;

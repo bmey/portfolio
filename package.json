@@ -20,7 +20,7 @@
     "reactstrap": "^5.0.0-alpha.4"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
+    "src/**/*.{js,scss}": [
       "prettier --trailing-comma es5 --write",
       "git add"
     ]

@@ -3,29 +3,29 @@
 @import "bootstrap/scss/mixins";
 
 .project-banner {
-    height: 15rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 
-    h2 {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
+  h2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 .project-quote {
-    padding: 20px;
+  padding: 20px;
 }
 
 @include media-breakpoint-down(xs) {
-    .project-banner h2 {
-        position: initial;
-    }        
+  .project-banner h2 {
+    position: initial;
+  }
 }
