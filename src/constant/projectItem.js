@@ -6,6 +6,7 @@ export const projectItems = [
   {
     key: "project1",
     src: splash1,
+    secondaryImages: ["img", "img", "img"],
     imageClassName: "img-horizontal",
     altText: "Project 1",
     title: "Project 1",
@@ -15,6 +16,7 @@ export const projectItems = [
   {
     key: "project2",
     src: splash2,
+    secondaryImages: ["img", "img", "img"],
     imageClassName: "img-horizontal",
     altText: "Project 2",
     title: "Project 2",
@@ -24,6 +26,7 @@ export const projectItems = [
   {
     key: "project3",
     src: splash3,
+    secondaryImages: ["img", "img", "img"],
     imageClassName: "img-horizontal",
     altText: "Project 3",
     title: "Project 3",

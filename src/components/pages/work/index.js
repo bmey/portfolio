@@ -21,7 +21,7 @@ class Work extends Component {
             />
 
             <ProjectDetails
-              images={[project.src]}
+              images={project.secondaryImages}
               description={project.caption}
               url={"http://www.google.com"}
               inverseDisplayOrder={index % 2 === 0}
