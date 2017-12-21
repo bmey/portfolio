@@ -76,17 +76,20 @@ class IconCarousel extends Component {
           onClickHandler={newIndex => this.goToIndex(newIndex)}
         />
 
-        {items.map(item => (
-          <CarouselItem
-            onExiting={() => this.onExiting()}
-            onExited={() => this.onExited()}
-            key={item.key}
-          >
-            <item.iconComponent size={50} />
-            <h3>{item.title}</h3>
-            <p class="icon-carousel-caption">{item.caption}</p>
-          </CarouselItem>
-        ))}
+        {items.map(item => {
+          const IconComponent = item.iconComponent;
+          return (
+            <CarouselItem
+              onExiting={() => this.onExiting()}
+              onExited={() => this.onExited()}
+              key={item.key}
+            >
+              <IconComponent size={50} />
+              <h3>{item.title}</h3>
+              <p className="icon-carousel-caption">{item.caption}</p>
+            </CarouselItem>
+          );
+        })}
 
         <CarouselControl
           direction="prev"

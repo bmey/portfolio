@@ -14,6 +14,7 @@ class IconCarouselIndicators extends Component {
 
     const indicators = items.map((item, idx) => {
       const indicatorClasses = classNames({ active: activeIndex === idx });
+      const IconComponent = item.iconComponent;
       return (
         <li
           key={item.key}
@@ -25,7 +26,7 @@ class IconCarouselIndicators extends Component {
           alt={item.altText}
           title={item.title}
         >
-          <item.iconComponent size={20} />
+          <IconComponent size={20} />
         </li>
       );
     });
