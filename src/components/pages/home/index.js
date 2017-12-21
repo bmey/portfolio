@@ -8,7 +8,6 @@ import heroImage from "../../../img/splash-1250x500.jpg";
 import Section from "../../section/Section";
 import HeroSection from "../../section-hero";
 import { projectItems } from "../../../constant/projectItem";
-import "../../shared/utility.css";
 import "./Home.css";
 import "./work.css";
 
