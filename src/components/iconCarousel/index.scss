@@ -1,0 +1,55 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.icon-carousel-indicator {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: initial;
+  margin: initial;
+}
+
+.icon-carousel-indicator li {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  color: #333;
+  opacity: 0.75;
+  margin: 0 0.25rem;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &.active {
+    opacity: 1;
+    color: #111;
+  }
+}
+
+.icon-carousel-caption {
+  @include media-breakpoint-up(xl) {
+    padding: 0 5.5rem;
+  }
+
+  @include media-breakpoint-only(lg) {
+    padding: 0 4rem;
+  }
+
+  @include media-breakpoint-only(md) {
+    padding: 0 3rem;
+  }
+
+  @include media-breakpoint-only(sm) {
+    padding: 0 5.5rem;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: 0.5rem 4rem 0;
+  }
+}

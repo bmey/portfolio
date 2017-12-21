@@ -5,6 +5,7 @@
   "homepage": "https://bmey.github.io/portfolio/",
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
+    "classnames": "^2.2.5",
     "husky": "^0.14.3",
     "jquery": "^3.0.0",
     "lint-staged": "^4.0.4",
