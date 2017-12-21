@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
 import Carousel from "../../carousel/carousel";
-import headshot from "../../../img/headshot.jpg";
+import Headshot from "../../headshot";
+import { headshotSize } from "../../../constant/sizes";
 import heroImage from "../../../img/splash-1250x500.jpg";
 import Section from "../../section/Section";
 import HeroSection from "../../section-hero";
@@ -44,12 +45,7 @@ class Home extends Component {
         <Section useSecondaryBackground>
           <h2>About</h2>
           <div className="grid-section-about">
-            <img
-              src={headshot}
-              alt="Bryan Mey"
-              className="circular-square"
-              style={{ height: "100px" }}
-            />
+            <Headshot size={headshotSize} />
             <div className="item-main">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               bibendum lorem nec maximus venenatis. Sed et posuere mauris. Nunc
