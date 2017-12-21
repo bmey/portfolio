@@ -15,7 +15,10 @@ class Contact extends Component {
       <div className="text-center">
         <h1>Contact</h1>
 
-        <div className="d-flex" style={{ margin: `${headshotRadius}rem 2rem` }}>
+        <div
+          className="d-flex flex-column flex-sm-row"
+          style={{ margin: `${headshotRadius}rem 2rem` }}
+        >
           <div className="contact-section form-section">
             <Headshot
               size={headshotSize}
@@ -29,7 +32,7 @@ class Contact extends Component {
             </div>
           </div>
 
-          <div className="contact-section d-flex flex-column justify-content-around">
+          <div className="contact-section marketing-section d-flex flex-column justify-content-around align-content-center">
             <div>Lorem ipsum wouebnvowin evownbrv wermv.</div>
 
             <div>

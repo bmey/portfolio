@@ -2,7 +2,7 @@
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(sm) {
   .process-description-long {
     flex-basis: 50%;
     margin-left: 1rem;
@@ -14,7 +14,7 @@
   }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(xs) {
   .process-content > * {
     margin: 1rem 0;
   }

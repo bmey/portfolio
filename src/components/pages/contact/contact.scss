@@ -1,8 +1,24 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
 .form-section {
   border: 1px solid #aaa;
 }
 
-.contact-section {
-  flex-basis: 50%;
-  margin: 0 1em;
+@include media-breakpoint-up(sm) {
+  .contact-section {
+    flex-basis: 50%;
+    margin: 0 1rem;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .contact-section {
+    margin: 1rem 1rem;
+  }
+
+  .marketing-section > * {
+    margin: 1rem 0;
+  }
 }
