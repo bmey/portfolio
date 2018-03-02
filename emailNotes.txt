@@ -10,5 +10,4 @@ https://jsfiddle.net/7dcfmr3j/14/
 Variables:
 email
 name
-subject
 message
