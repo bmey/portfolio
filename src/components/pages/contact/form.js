@@ -6,35 +6,32 @@ export default class Form extends Component {
     name: "",
     email: "",
     message: "",
+    isFormValid: false,
   };
 
   handleInputChange(event) {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
+    const { value, name } = event.target;
+    const nextFormState = { ...this.state, [name]: value };
+    const isFormValid = this.isFormValid(nextFormState, this.emailInput);
 
     this.setState({
       [name]: value,
+      isFormValid: isFormValid,
     });
   }
 
-  isFormValid() {
-    const { name, email, message } = this.state;
+  isFormValid(formState, emailInput) {
+    const { name, email, message } = formState;
+
     return (
-      name.length > 0 &&
-      !name.trim() &&
-      email.length > 0 &&
-      !email.trim() &&
-      message.length > 0 &&
-      !message.trim()
+      name.trim() && email.trim() && message.trim() && emailInput.validity.valid
     );
   }
 
   handleSubmit(event) {
-    if (this.isFormValid()) {
+    if (this.state.isFormValid) {
       event.preventDefault();
       sendEmail(this.state);
-      console.log("valid form. sending mail...");
     } else {
       console.log("invalid form");
     }
@@ -59,6 +56,7 @@ export default class Form extends Component {
             aria-required="true"
           />
         </p>
+
         <p className="d-flex flex-column">
           <label htmlFor="email">
             Email address: <abbr title="required">*</abbr>
@@ -67,11 +65,15 @@ export default class Form extends Component {
             id="email"
             name="email"
             type="email"
+            ref={input => {
+              this.emailInput = input;
+            }}
             value={this.state.email}
             onChange={e => this.handleInputChange(e)}
             aria-required="true"
           />
         </p>
+
         <p className="d-flex flex-column">
           <label htmlFor="message">
             What would you like to discuss? <abbr title="required">*</abbr>
@@ -89,13 +91,15 @@ export default class Form extends Component {
             {500 - this.state.message.length} characters left
           </small>
         </p>
+
         <div
           className="g-recaptcha"
           data-sitekey="6LdDfEgUAAAAAKlhMWyiPZkXPgFVPDsSd5i7Gn61"
         />
+
         <input
           type="submit"
-          disabled={this.state.isFormValid}
+          disabled={!this.state.isFormValid}
           value="Send message"
           className="btn btn-primary"
         />
