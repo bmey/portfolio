@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import sendEmail from "./submitForm";
+import sendEmail from "./sendEmail";
 
 export default class Form extends Component {
   state = {
