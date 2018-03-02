@@ -1,0 +1,13 @@
+EmailJS:
+https://dashboard.emailjs.com/
+
+Recaptcha:
+https://www.google.com/recaptcha/admin#list
+
+Test:
+https://jsfiddle.net/7dcfmr3j/14/
+
+Variables:
+email
+name
+message
