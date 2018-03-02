@@ -10,7 +10,7 @@ const handleError = function(err) {
 };
 
 const sendEmail = function(form) {
-  return emailjs
+  return window.emailjs
     .send(serviceKey, templateKey, form)
     .then(handleSuccess, handleError);
 };
