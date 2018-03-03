@@ -11,27 +11,13 @@ export default class Form extends Component {
     isFormValid: false,
   };
 
-  handleInputChange(event) {
-    const { value, name } = event.target;
-
+  handleInputChange({ value, name }) {
     this.setState((prevState, props) => {
       const tempState = { ...prevState, [name]: value };
       const isFormValid = this.isFormValid(tempState, this.emailInput);
 
       return {
         [name]: value,
-        isFormValid: isFormValid,
-      };
-    });
-  }
-
-  handleRecaptchaChange(value) {
-    this.setState((prevState, props) => {
-      const tempState = { ...prevState, recaptcha: value };
-      const isFormValid = this.isFormValid(tempState, this.emailInput);
-
-      return {
-        recaptcha: value,
         isFormValid: isFormValid,
       };
     });
@@ -73,7 +59,7 @@ export default class Form extends Component {
             name="name"
             type="text"
             value={this.state.name}
-            onChange={e => this.handleInputChange(e)}
+            onChange={e => this.handleInputChange(e.target)}
             aria-required="true"
           />
         </p>
@@ -90,7 +76,7 @@ export default class Form extends Component {
               this.emailInput = input;
             }}
             value={this.state.email}
-            onChange={e => this.handleInputChange(e)}
+            onChange={e => this.handleInputChange(e.target)}
             aria-required="true"
           />
         </p>
@@ -104,7 +90,7 @@ export default class Form extends Component {
             name="message"
             type="text"
             value={this.state.firstName}
-            onChange={e => this.handleInputChange(e)}
+            onChange={e => this.handleInputChange(e.target)}
             maxLength={500}
             aria-required="true"
           />
@@ -116,7 +102,9 @@ export default class Form extends Component {
         <p className="d-flex justify-content-center">
           <ReCaptcha
             sitekey="6LdDfEgUAAAAAKlhMWyiPZkXPgFVPDsSd5i7Gn61"
-            onChange={value => this.handleRecaptchaChange(value)}
+            onChange={value =>
+              this.handleInputChange({ name: "recaptcha", value })
+            }
             className="text-center"
           />
         </p>
