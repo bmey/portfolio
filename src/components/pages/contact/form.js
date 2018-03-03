@@ -1,30 +1,51 @@
 import React, { Component } from "react";
 import sendEmail from "./sendEmail";
+import ReCaptcha from "react-google-recaptcha";
 
 export default class Form extends Component {
   state = {
     name: "",
     email: "",
     message: "",
+    recaptcha: null,
     isFormValid: false,
   };
 
   handleInputChange(event) {
     const { value, name } = event.target;
-    const nextFormState = { ...this.state, [name]: value };
-    const isFormValid = this.isFormValid(nextFormState, this.emailInput);
 
-    this.setState({
-      [name]: value,
-      isFormValid: isFormValid,
+    this.setState((prevState, props) => {
+      const tempState = { ...prevState, [name]: value };
+      const isFormValid = this.isFormValid(tempState, this.emailInput);
+
+      return {
+        [name]: value,
+        isFormValid: isFormValid,
+      };
     });
   }
 
-  isFormValid(formState, emailInput) {
-    const { name, email, message } = formState;
+  handleRecaptchaChange(value) {
+    this.setState((prevState, props) => {
+      const tempState = { ...prevState, recaptcha: value };
+      const isFormValid = this.isFormValid(tempState, this.emailInput);
+
+      return {
+        recaptcha: value,
+        isFormValid: isFormValid,
+      };
+    });
+  }
+
+  isFormValid(nextState, emailInput) {
+    const { name, email, message, recaptcha } = nextState;
 
     return (
-      name.trim() && email.trim() && message.trim() && emailInput.validity.valid
+      recaptcha !== null &&
+      name.trim() &&
+      email.trim() &&
+      message.trim() &&
+      emailInput.validity.valid
     );
   }
 
@@ -92,10 +113,13 @@ export default class Form extends Component {
           </small>
         </p>
 
-        <div
-          className="g-recaptcha"
-          data-sitekey="6LdDfEgUAAAAAKlhMWyiPZkXPgFVPDsSd5i7Gn61"
-        />
+        <p className="d-flex justify-content-center">
+          <ReCaptcha
+            sitekey="6LdDfEgUAAAAAKlhMWyiPZkXPgFVPDsSd5i7Gn61"
+            onChange={value => this.handleRecaptchaChange(value)}
+            className="text-center"
+          />
+        </p>
 
         <input
           type="submit"
