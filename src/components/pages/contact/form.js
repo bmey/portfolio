@@ -1,30 +1,37 @@
 import React, { Component } from "react";
 import sendEmail from "./sendEmail";
+import ReCaptcha from "react-google-recaptcha";
 
 export default class Form extends Component {
   state = {
     name: "",
     email: "",
     message: "",
+    recaptcha: null,
     isFormValid: false,
   };
 
-  handleInputChange(event) {
-    const { value, name } = event.target;
-    const nextFormState = { ...this.state, [name]: value };
-    const isFormValid = this.isFormValid(nextFormState, this.emailInput);
+  handleInputChange({ value, name }) {
+    this.setState((prevState, props) => {
+      const tempState = { ...prevState, [name]: value };
+      const isFormValid = this.isFormValid(tempState, this.emailInput);
 
-    this.setState({
-      [name]: value,
-      isFormValid: isFormValid,
+      return {
+        [name]: value,
+        isFormValid: isFormValid,
+      };
     });
   }
 
-  isFormValid(formState, emailInput) {
-    const { name, email, message } = formState;
+  isFormValid(nextState, emailInput) {
+    const { name, email, message, recaptcha } = nextState;
 
     return (
-      name.trim() && email.trim() && message.trim() && emailInput.validity.valid
+      recaptcha !== null &&
+      name.trim() &&
+      email.trim() &&
+      message.trim() &&
+      emailInput.validity.valid
     );
   }
 
@@ -52,7 +59,7 @@ export default class Form extends Component {
             name="name"
             type="text"
             value={this.state.name}
-            onChange={e => this.handleInputChange(e)}
+            onChange={e => this.handleInputChange(e.target)}
             aria-required="true"
           />
         </p>
@@ -69,7 +76,7 @@ export default class Form extends Component {
               this.emailInput = input;
             }}
             value={this.state.email}
-            onChange={e => this.handleInputChange(e)}
+            onChange={e => this.handleInputChange(e.target)}
             aria-required="true"
           />
         </p>
@@ -83,7 +90,7 @@ export default class Form extends Component {
             name="message"
             type="text"
             value={this.state.firstName}
-            onChange={e => this.handleInputChange(e)}
+            onChange={e => this.handleInputChange(e.target)}
             maxLength={500}
             aria-required="true"
           />
@@ -92,10 +99,15 @@ export default class Form extends Component {
           </small>
         </p>
 
-        <div
-          className="g-recaptcha"
-          data-sitekey="6LdDfEgUAAAAAKlhMWyiPZkXPgFVPDsSd5i7Gn61"
-        />
+        <p className="d-flex justify-content-center">
+          <ReCaptcha
+            sitekey="6LdDfEgUAAAAAKlhMWyiPZkXPgFVPDsSd5i7Gn61"
+            onChange={value =>
+              this.handleInputChange({ name: "recaptcha", value })
+            }
+            className="text-center"
+          />
+        </p>
 
         <input
           type="submit"
