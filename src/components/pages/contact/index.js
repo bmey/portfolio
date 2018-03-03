@@ -16,7 +16,7 @@ class Contact extends Component {
         <h1>Contact</h1>
 
         <div
-          className="d-flex flex-column flex-sm-row"
+          className="d-flex flex-column flex-md-row"
           style={{ margin: `${headshotRadius}rem 2rem` }}
         >
           <div className="contact-section form-section">

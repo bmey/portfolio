@@ -6,14 +6,14 @@
   border: 1px solid #aaa;
 }
 
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(md) {
   .contact-section {
     flex-basis: 50%;
     margin: 0 1rem;
   }
 }
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
   .contact-section {
     margin: 1rem 1rem;
   }
