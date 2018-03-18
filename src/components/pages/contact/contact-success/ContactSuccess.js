@@ -6,13 +6,13 @@ import "./contact-success.css";
 class ContactSuccess extends Component {
   render() {
     return (
-      <p className="contact-section-content">
+      <div className="contact-section-content">
         <h3>Thank you!</h3>
         <p>Lorem ipsum wouebnvowin evownbrv wermv.</p>
         <Link to="/">
           <Button color="primary">Return to home</Button>
         </Link>
-      </p>
+      </div>
     );
   }
 }
