@@ -22,3 +22,9 @@
     margin: 1rem 0;
   }
 }
+
+@include media-breakpoint-down(xs) {
+  .recaptcha-container {
+    transform: scale(0.77);
+  }
+}

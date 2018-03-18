@@ -105,7 +105,7 @@ export default class Form extends Component {
             onChange={value =>
               this.handleInputChange({ name: "recaptcha", value })
             }
-            className="text-center"
+            className="recaptcha-container text-center"
           />
         </p>
 
