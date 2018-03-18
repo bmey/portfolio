@@ -12,7 +12,7 @@ import "./contact.css";
 class Contact extends Component {
   render() {
     const headshotRadius = headshotSize / 2;
-    const { match } = this.props;
+    const { match, history } = this.props;
 
     return (
       <div className="text-center">
@@ -37,7 +37,9 @@ class Contact extends Component {
                     Lorem ipsum wouebnvowin evownbrv wermv.
                   </p>
                   <div style={{ margin: "1rem 2rem" }}>
-                    <Form />
+                    <Form
+                      onSubmit={() => history.push(`${match.url}/thankyou`)}
+                    />
                   </div>
                 </div>
               )}

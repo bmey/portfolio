@@ -35,19 +35,21 @@ export default class Form extends Component {
     );
   }
 
-  handleSubmit(event) {
+  handleSubmit(event, onSubmit) {
     if (this.state.isFormValid) {
       event.preventDefault();
-      sendEmail(this.state);
+      sendEmail(this.state).then(onSubmit);
     } else {
       console.log("invalid form");
     }
   }
 
   render() {
+    const { onSubmit } = this.props;
+
     return (
       <form
-        onSubmit={e => this.handleSubmit(e)}
+        onSubmit={e => this.handleSubmit(e, onSubmit)}
         className="d-flex flex-column text-left"
       >
         <p className="d-flex flex-column">
