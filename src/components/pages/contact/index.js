@@ -1,15 +1,18 @@
 import React, { Component } from "react";
+import { Route } from "react-router-dom";
 import Form from "./form";
 import Headshot from "../../headshot";
 import SocialMediaLink from "../../socialMediaLink";
 import socialMediaLinks from "../../../constant/socialMedia";
 import MdEmail from "react-icons/lib/md/email";
 import { headshotSize } from "../../../constant/sizes";
+import ContactSuccess from "./contact-success/ContactSuccess";
 import "./contact.css";
 
 class Contact extends Component {
   render() {
     const headshotRadius = headshotSize / 2;
+    const { match } = this.props;
 
     return (
       <div className="text-center">
@@ -24,12 +27,21 @@ class Contact extends Component {
               size={headshotSize}
               style={{ marginTop: `-${headshotRadius}rem` }}
             />
-            <p style={{ margin: "2rem" }}>
-              Lorem ipsum wouebnvowin evownbrv wermv.
-            </p>
-            <div style={{ margin: "1rem 2rem" }}>
-              <Form />
-            </div>
+            <Route path={`${match.url}/thankyou`} component={ContactSuccess} />
+            <Route
+              exact
+              path={match.url}
+              render={() => (
+                <div>
+                  <p style={{ margin: "2rem" }}>
+                    Lorem ipsum wouebnvowin evownbrv wermv.
+                  </p>
+                  <div style={{ margin: "1rem 2rem" }}>
+                    <Form />
+                  </div>
+                </div>
+              )}
+            />
           </div>
 
           <div className="contact-section marketing-section d-flex flex-column justify-content-around align-content-center">
