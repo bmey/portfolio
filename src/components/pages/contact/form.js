@@ -8,14 +8,28 @@ import CaptchaInput from "./CaptchaInput";
 export default class Form extends Component {
   state = {
     canSubmitForm: false,
+    submitInProgress: false,
   };
 
   setCanSubmitForm(isFormValid) {
     this.setState({ canSubmitForm: isFormValid });
   }
 
+  handleSubmitSuccess() {
+    this.props.onSubmit();
+  }
+
+  handleSubmitFailed() {
+    this.setState({ submitInProgress: false });
+  }
+
   handleSubmit(model) {
-    sendEmail(model).then(this.props.onSubmit);
+    this.setState({ submitInProgress: true }, () => {
+      sendEmail(model).then(
+        () => this.handleSubmitSuccess(),
+        () => this.handleSubmitFailed()
+      );
+    });
   }
 
   render() {
@@ -60,8 +74,10 @@ export default class Form extends Component {
 
         <input
           type="submit"
-          disabled={!this.state.canSubmitForm}
-          value="Send message"
+          disabled={!this.state.canSubmitForm || this.state.submitInProgress}
+          value={
+            this.state.submitInProgress ? "Sending message..." : "Send message"
+          }
           className="btn btn-primary"
         />
       </Formsy>
