@@ -23,6 +23,7 @@ class TextAreaInput extends Component {
           onChange={e => this.handleOnChange(e)}
           aria-required={required}
           maxLength={maxLength}
+          disabled={this.props.isFormDisabled()}
         />
         <span>{this.props.getErrorMessage()}</span>
         <small className="text-muted">

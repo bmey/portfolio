@@ -39,6 +39,7 @@ export default class Form extends Component {
         onValid={() => this.setCanSubmitForm(true)}
         onInvalid={() => this.setCanSubmitForm(false)}
         className="d-flex flex-column text-left"
+        disabled={this.state.submitInProgress}
       >
         <TextInput label="Full name:" name="name" type="text" required />
 

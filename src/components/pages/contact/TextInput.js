@@ -22,6 +22,7 @@ class TextInput extends Component {
           value={this.props.getValue() || ""}
           onChange={e => this.handleOnChange(e)}
           aria-required={required}
+          disabled={this.props.isFormDisabled()}
         />
         <span>{this.props.getErrorMessage()}</span>
       </p>
