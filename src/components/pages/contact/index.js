@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import FormContainer from "./FormContainer";
+import FormContainer from "../../form/FormContainer";
 import Headshot from "../../headshot";
 import SocialMediaLink from "../../socialMediaLink";
 import socialMediaLinks from "../../../constant/socialMedia";

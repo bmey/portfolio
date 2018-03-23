@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import sendEmail from "./sendEmail";
+import sendEmail from "../../services/sendEmail";
 import FormPresentation from "./FormPresentation";
 
 export default class FormContainer extends Component {
