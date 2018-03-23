@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import Form from "./form";
+import FormContainer from "./FormContainer";
 import Headshot from "../../headshot";
 import SocialMediaLink from "../../socialMediaLink";
 import socialMediaLinks from "../../../constant/socialMedia";
@@ -37,7 +37,7 @@ class Contact extends Component {
                     Lorem ipsum wouebnvowin evownbrv wermv.
                   </p>
                   <div style={{ margin: "1rem 2rem" }}>
-                    <Form
+                    <FormContainer
                       onSubmit={() => history.push(`${match.url}/thankyou`)}
                     />
                   </div>
