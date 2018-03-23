@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withFormsy } from "formsy-react";
+import RequiredAbbreviation from "./RequiredAbbreviation";
 
 class TextInput extends Component {
   handleOnChange(event) {
@@ -13,7 +14,7 @@ class TextInput extends Component {
       <p className="d-flex flex-column">
         <label htmlFor={name}>
           {label}
-          {required && <abbr title="required">*</abbr>}
+          {required && <RequiredAbbreviation />}
         </label>
         <input
           id={name}
