@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
-import Carousel from "../../carousel/carousel";
-import Headshot from "../../headshot";
+import Carousel from "../../carousel/Carousel";
+import Headshot from "../../headshot/Headshot";
 import { headshotSize } from "../../../constant/sizes";
 import heroImage from "../../../img/splash-1250x500.jpg";
 import Section from "../../section/Section";
-import HeroSection from "../../section-hero";
+import HeroSection from "../../heroSection/HeroSection";
 import { projectItems } from "../../../constant/projectItem";
-import "./Home.css";
+import "./home.css";
 import "./work.css";
 
 class Home extends Component {

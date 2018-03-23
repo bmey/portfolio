@@ -1,29 +1,29 @@
 import asyncComponent from "./AsyncComponent";
 
 export const notFoundRoute = {
-  component: asyncComponent(() => import("./pages/not-found")),
+  component: asyncComponent(() => import("./pages/notFound/NotFound")),
 };
 
 export const appRoutes = [
   {
     path: "/",
     text: "Home",
-    component: asyncComponent(() => import("./pages/home")),
+    component: asyncComponent(() => import("./pages/home/Home")),
     exact: true,
   },
   {
     path: "/work",
     text: "Work",
-    component: asyncComponent(() => import("./pages/work")),
+    component: asyncComponent(() => import("./pages/work/Work")),
   },
   {
     path: "/about",
     text: "About",
-    component: asyncComponent(() => import("./pages/about")),
+    component: asyncComponent(() => import("./pages/about/About")),
   },
   {
     path: "/contact",
     text: "Contact",
-    component: asyncComponent(() => import("./pages/contact")),
+    component: asyncComponent(() => import("./pages/contact/Contact")),
   },
 ];

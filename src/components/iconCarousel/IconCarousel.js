@@ -6,7 +6,7 @@ import {
   CarouselControl,
 } from "reactstrap";
 import IconCarouselIndicators from "./IconCarouselIndicator";
-import "./index.css";
+import "./iconCarousel.css";
 
 class IconCarousel extends Component {
   static propTypes = {

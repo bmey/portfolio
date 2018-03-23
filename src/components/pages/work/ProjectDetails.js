@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Container, Row, Col, Button } from "reactstrap";
 import MdImage from "react-icons/lib/md/image";
-import "./ProjectDetails.css";
+import "./projectDetails.css";
 
 export default class ProjectDetails extends Component {
   static propTypes = {

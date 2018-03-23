@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import FormContainer from "../../form/FormContainer";
-import Headshot from "../../headshot";
-import SocialMediaLink from "../../socialMediaLink";
+import Headshot from "../../headshot/Headshot";
+import SocialMediaLink from "../../socialMediaLink/SocialMediaLink";
 import socialMediaLinks from "../../../constant/socialMedia";
 import MdEmail from "react-icons/lib/md/email";
 import { headshotSize } from "../../../constant/sizes";

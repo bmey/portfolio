@@ -1,8 +1,8 @@
-import "./Nav.css";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { NavLink, Link } from "react-router-dom";
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
+import "./nav.css";
 
 export default class ResponsiveNav extends Component {
   static propTypes = {

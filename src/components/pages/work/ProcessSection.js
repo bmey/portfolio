@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import IconCarousel from "../../iconCarousel/index";
+import IconCarousel from "../../iconCarousel/IconCarousel";
 import { workProcessItems } from "../../../constant/workProcessItems";
-import "./ProcessSection.css";
+import "./processSection.css";
 
 export default class ProcessSection extends Component {
   render() {

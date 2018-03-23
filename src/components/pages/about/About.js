@@ -4,9 +4,9 @@ import Experiences from "./Experiences";
 import Story from "./Story";
 import CallToAction from "./CallToAction";
 import Section from "../../section/Section";
-import HeroSection from "../../section-hero";
+import HeroSection from "../../heroSection/HeroSection";
 import heroImage from "../../../img/splash-1250x500.jpg";
-import "./section-hero.css";
+import "./heroSection.css";
 
 class About extends Component {
   render() {
