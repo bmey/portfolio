@@ -6,7 +6,7 @@ import SocialMediaLink from "../../socialMediaLink/SocialMediaLink";
 import socialMediaLinks from "../../../constant/socialMedia";
 import MdEmail from "react-icons/lib/md/email";
 import { headshotSize } from "../../../constant/sizes";
-import ContactSuccess from "./contact-success/ContactSuccess";
+import ContactSuccess from "./contactSuccess/ContactSuccess";
 import "./contact.css";
 
 class Contact extends Component {

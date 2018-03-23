@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
-import "./contact-success.css";
+import "./contactSuccess.css";
 
 class ContactSuccess extends Component {
   render() {
