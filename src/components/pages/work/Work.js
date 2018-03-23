@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Section from "../../section/Section";
-import ProcessSection from "./ProcessSection";
-import ProjectBanner from "./ProjectBanner";
-import ProjectDetails from "./ProjectDetails";
+import ProcessSection from "./processSection/ProcessSection";
+import ProjectBanner from "./projectBanner/ProjectBanner";
+import ProjectDetails from "./projectDetails/ProjectDetails";
 import CallToAction from "./CallToAction";
 import { projectItems } from "../../../constant/projectItem";
 
