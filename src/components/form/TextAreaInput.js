@@ -1,8 +1,17 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { withFormsy } from "formsy-react";
 import RequiredAbbreviation from "./RequiredAbbreviation";
 
 class TextAreaInput extends Component {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    required: PropTypes.bool.isRequired,
+    maxLength: PropTypes.number,
+    ...this.propTypes,
+  };
+
   handleOnChange(event) {
     this.props.setValue(event.currentTarget.value);
   }

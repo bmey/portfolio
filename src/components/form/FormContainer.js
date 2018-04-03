@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import sendEmail from "../../services/sendEmail";
 import FormPresentation from "./FormPresentation";
 
 export default class FormContainer extends Component {
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
+
   state = {
     canSubmitForm: false,
     submitInProgress: false,

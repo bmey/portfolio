@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
 import Formsy from "formsy-react";
 import TextInput from "./TextInput";
 import TextAreaInput from "./TextAreaInput";
@@ -8,6 +9,15 @@ const MAX_EMAIL_LENGTH = 50;
 const MAX_MESSAGE_LENGTH = 500;
 
 export default class FormPresentation extends PureComponent {
+  static propTypes = {
+    disabled: PropTypes.bool.isRequired,
+    onInvalid: PropTypes.func.isRequired,
+    onValid: PropTypes.func.isRequired,
+    onValidSubmit: PropTypes.func.isRequired,
+    submitDisabled: PropTypes.bool.isRequired,
+    submitInProgress: PropTypes.bool.isRequired,
+  };
+
   render() {
     return (
       <Formsy
