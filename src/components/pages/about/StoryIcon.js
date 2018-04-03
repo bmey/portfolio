@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Col } from "reactstrap";
 
 const StoryIcon = props => {
@@ -7,6 +8,10 @@ const StoryIcon = props => {
       {props.children}
     </Col>
   );
+};
+
+StoryIcon.propTypes = {
+  children: PropTypes.any.isRequired,
 };
 
 export default StoryIcon;
