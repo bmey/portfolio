@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Route } from "react-router-dom";
 import FormContainer from "../../form/FormContainer";
 import Headshot from "../../headshot/Headshot";
@@ -9,8 +10,9 @@ import { headshotSize } from "../../../constant/sizes";
 import ContactSuccess from "./contactSuccess/ContactSuccess";
 import "./contact.css";
 
+const headshotRadius = headshotSize / 2;
+
 const Contact = props => {
-  const headshotRadius = headshotSize / 2;
   const { match, history } = props;
 
   return (
@@ -79,6 +81,11 @@ const Contact = props => {
       </div>
     </div>
   );
+};
+
+Contact.propTypes = {
+  match: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
 };
 
 export default Contact;
