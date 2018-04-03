@@ -1,14 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import { Col } from "reactstrap";
 
-class StoryIcon extends Component {
-  render() {
-    return (
-      <Col xs={2} md={4} className="text-center">
-        {this.props.children}
-      </Col>
-    );
-  }
-}
+const StoryIcon = props => {
+  return (
+    <Col xs={2} md={4} className="text-center">
+      {props.children}
+    </Col>
+  );
+};
 
 export default StoryIcon;
