@@ -22,6 +22,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "flow-bin": "^0.69.0",
     "gh-pages": "^1.1.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.4",
